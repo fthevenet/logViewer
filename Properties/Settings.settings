@@ -1,0 +1,90 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FTH.Utils.LogViewer.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="showDebugEvents" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="showInfoEvents" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="showWarnEvents" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="showErrorEvents" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="showFatalEvents" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="applySeverityColors" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ThreadFilterHistory" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LoggerFilterHistory" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MessageFilterHistory" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="debugEventColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">234, 234, 234</Value>
+    </Setting>
+    <Setting Name="infoEventColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">202, 255, 202</Value>
+    </Setting>
+    <Setting Name="warnEventColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">253, 242, 170</Value>
+    </Setting>
+    <Setting Name="errorEventColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">255, 128, 128</Value>
+    </Setting>
+    <Setting Name="fatalEventColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Red</Value>
+    </Setting>
+    <Setting Name="useSystemColors" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ParsingRegExTime" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\d{4}\-\d{2}\-\d{2}\s\d{2}:\d{2}:\d{2}[\.,]\d{3}</Value>
+    </Setting>
+    <Setting Name="ParsingRegExThread" Type="System.String" Scope="User">
+      <Value Profile="(Default)">[\w\.-_]*</Value>
+    </Setting>
+    <Setting Name="ParsingRegExSeverity" Type="System.String" Scope="User">
+      <Value Profile="(Default)">(?i)DEBUG|INFO|WARN|ERROR|FATAL</Value>
+    </Setting>
+    <Setting Name="ParsingRegExLogger" Type="System.String" Scope="User">
+      <Value Profile="(Default)">[\w\.-_]*</Value>
+    </Setting>
+    <Setting Name="ParsingRegExMessage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.*</Value>
+    </Setting>
+    <Setting Name="ParsingRegExLine" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;time&gt;\s+\[&lt;thread&gt;\]\s+&lt;severity&gt;\s+&lt;logger&gt;\s-\s&lt;message&gt;</Value>
+    </Setting>
+    <Setting Name="showLineColumn" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="showTimeColumn" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="showThreadColumn" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="showSeverityColumn" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="showLoggerColumn" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="showMessageColumn" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="showDetailsPane" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

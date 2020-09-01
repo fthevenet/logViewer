@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DA9C6936-8E4D-47B9-A42E-89D33B68889F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FTH.Utils.LogViewer</RootNamespace>
+    <AssemblyName>LogViewer</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\IAINUNIV.Dependencies\Log4net\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuffedDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CheckStateBoundToolStripButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CheckStateBoundToolStripMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomToolStripRenderer.cs" />
+    <Compile Include="EventDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventDetails.Designer.cs">
+      <DependentUpon>EventDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="logEvent.cs" />
+    <Compile Include="PropertyFactory.cs" />
+    <Compile Include="Providers\LogProviderFactory.cs" />
+    <Compile Include="Providers\LogProviderAttribute.cs" />
+    <Compile Include="Providers\LogFile\LogFile.cs" />
+    <Compile Include="Providers\LogProviderBase.cs" />
+    <Compile Include="Providers\LogFile\ParsingExpressions.cs" />
+    <Compile Include="Providers\UnknownCommandException.cs" />
+    <Compile Include="StringHistory.cs" />
+    <Compile Include="OpenLogFileException.cs" />
+    <Compile Include="PropertyContainer.cs" />
+    <Compile Include="ToolStripDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Providers\ILogProvider.cs" />
+    <Compile Include="Tools\ColorExtentions.cs" />
+    <Compile Include="Tools\Log4netConfigTools.cs" />
+    <Compile Include="Tools\MruStripMenu.cs" />
+    <Compile Include="Tools\PerfMonitor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Providers\LogFile\editRulesDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Providers\LogFile\editRulesDlg.Designer.cs">
+      <DependentUpon>editRulesDlg.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EventDetails.resx">
+      <DependentUpon>EventDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Providers\LogFile\editRulesDlg.resx">
+      <DependentUpon>editRulesDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Debug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fatal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\watch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colorBySev.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icoOpen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icoClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icoReload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tick_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icoFilter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icoRefresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icoFilterDateTime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icoDateTime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbonTabHilite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbonTabActive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbonTabNone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fileText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\helpText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viewText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\watch1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fileClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settingsText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Log4net\log4net.dll" />
+    <Content Include="Log4net\log4net_LICENSE.txt" />
+    <Content Include="Log4net\log4net_NOTICE.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ParsingExpressions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TimeStamp Text="\d{4}\-\d{2}\-\d{2}\s\d{2}:\d{2}:\d{2}[\.,]\d{3}" />
+  <Thread Text="[\w\.-_]*" />
+  <Severity Text="(?i)DEBUG|INFO|WARN|ERROR|FATAL" />
+  <Logger Text="[\w\.-_]*" />
+  <Message Text=".*" />
+  <Line Text="&lt;time&gt;\s+\[&lt;thread&gt;\]\s+&lt;severity&gt;\s+&lt;logger&gt;\s-\s&lt;message&gt;" />
+</ParsingExpressions>
